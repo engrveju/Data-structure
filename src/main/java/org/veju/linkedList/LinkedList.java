@@ -65,10 +65,53 @@ public class LinkedList {
         first.next=null;
         first=second;
     }
-
     public void removeLast(){
-        Node
+        Node current = first;
+        Node secondToLast;
+        if(first==null)
+            return;
+        if(current.next==null){
+            first=null;
+            return;
+        }
+        while(current!=last){
+            if(current.next.equals(last)){
+                secondToLast =current;
+                last = secondToLast;
+                current.next=null;
+            }else {
+                current = current.next;
+            }
+        }
     }
+    public int size(){
+        int size=0;
+        Node current = first;
+        while(current!=null){
+            size++;
+            current =current.next;
+        }
+        return size;
+
+        // This method is not efficient as you will traverse through all items in the list
+        //The best thing is to have size as a private field. Increment size each time sth is
+        // added and decrement each time sth is removed
+    }
+
+    public void reverse(){
+       Node beginning = first;
+       Node current = beginning.next;
+       while(current!=null) {
+       Node third = current.next;
+           current.next = beginning;
+           beginning = current;
+           current = third;
+       }
+        last=first;
+        last.next = null;
+        first = beginning;
+    }
+
     public  boolean isEmpty(){
         return first == null;
     }
