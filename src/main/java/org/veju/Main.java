@@ -1,7 +1,6 @@
 package org.veju;
 
 import org.veju.linkedList.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
