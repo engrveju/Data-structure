@@ -111,7 +111,6 @@ public class LinkedList {
         last.next = null;
         first = beginning;
     }
-
     public  boolean isEmpty(){
         return first == null;
     }
@@ -123,4 +122,5 @@ public class LinkedList {
             this.value = value;
         }
     }
+    //Read carefullly
 }
