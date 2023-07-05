@@ -12,9 +12,9 @@ public class Main {
 //        System.out.println(list.indexOf(4));
 
         LinkedList list2 = new LinkedList();
-//        list2.addLast(3);
-//        list2.addLast(1);
-//        list2.addLast(9);
+        list2.addLast(3);
+        list2.addLast(1);
+        list2.addLast(9);
         list2.addLast(4);
         list2.addLast(7);
         System.out.println(list2.size()+"Size");
