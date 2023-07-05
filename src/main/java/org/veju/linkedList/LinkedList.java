@@ -116,7 +116,7 @@ public class LinkedList {
         return first == null;
     }
     public static class Node{
-        private int value;
+        private final int value;
         private Node next;
 
         public Node(int value){
